@@ -16,7 +16,8 @@ public class LocalInputReader implements InputReader {
 
     @Override
     public SearchContext getSearchContext() {
-        return ImmutableSearchContext.builder().artist("Lana Del Rey").album("Honeymoon").genre("Pop").build();
+        System.out.println("Search by artist:");
+        return ImmutableSearchContext.builder().artist(scanner.next()).build();
     }
 
     @Override
