@@ -8,18 +8,17 @@ import org.immutables.value.Value;
 import javax.annotation.Nullable;
 
 @Value.Immutable
-@JsonDeserialize(as = ImmutableHeader.class)
+@JsonDeserialize(as = ImmutableAlbum.class)
 @Gson.TypeAdapters
-public interface Header {
-    @SerializedName("status_code")
-    int getStatusCode();
+public interface Album {
+    @SerializedName("album_id")
+    int getAlbumId();
 
-    @SerializedName("execute_time")
-    double getExecuteTime();
-
-    @SerializedName("available")
+    @SerializedName("album_name")
     @Nullable
-    Integer getAvailable();
+    String getAlbumName();
 
-
+    @SerializedName("album_release_type")
+    @Nullable
+    String getAlbumReleaseType();
 }
